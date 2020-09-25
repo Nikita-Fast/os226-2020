@@ -51,7 +51,7 @@ static inline long os_syscall(int syscall,
 				(unsigned long) name3, (unsigned long) name4, (void *) 0); \
 	}
 #define DEFINE5(ret, name, type1, name1, type2, name2, type3, name3, type4, name4, type5, name5) \
-	static inline ret os_ ## name (type1 name1, type2 name2, type3 name3, type4 name4) { \
+	static inline ret os_ ## name (type1 name1, type2 name2, type3 name3, type4 name4, type5 name5) { \
 		return (ret) os_syscall(os_syscall_nr_ ## name, (unsigned long) name1, (unsigned long) name2, \
 				(unsigned long) name3, (unsigned long) name4, (void *) name5); \
 	}
